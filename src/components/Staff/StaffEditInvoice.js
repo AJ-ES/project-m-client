@@ -647,7 +647,7 @@ const StaffEditInvoice = () => {
                   type="text"
                   name="buyerdetails.buyercompanygstno"
                   value={formData.buyerdetails?.buyercompanygstno || ""}
-                  onChange={handleChange1}
+                  onChange={handleChange2}
                 />
               </div>
             </div>
@@ -749,7 +749,7 @@ const StaffEditInvoice = () => {
                   type="text"
                   name="sellerdetails.sellercompanygstno"
                   value={formData.sellerdetails?.sellercompanygstno || ""}
-                  onChange={handleChange1}
+                  onChange={handleChange2}
                 />
               </div>
             </div>
