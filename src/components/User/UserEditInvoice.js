@@ -647,7 +647,7 @@ const UserEditInvoice = () => {
                   type="text"
                   name="buyerdetails.buyercompanygstno"
                   value={formData.buyerdetails?.buyercompanygstno || ""}
-                  onChange={handleChange1}
+                  onChange={handleChange2}
                 />
               </div>
             </div>
