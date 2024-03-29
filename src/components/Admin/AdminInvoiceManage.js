@@ -6,7 +6,7 @@ import { useReactToPrint } from 'react-to-print';
 import Modal from 'react-modal';
 
 const AdminViewandEditInvoice1 = () => {
-  const qrCodeValue = "https://saikumarguduru.me";
+  const qrCodeValue = "https://thegapindustries.com";
   const componentRef = useRef();
   const [invoices, setInvoices] = useState([]);
   const [selectedInvoice, setSelectedInvoice] = useState(null);
