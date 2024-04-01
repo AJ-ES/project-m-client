@@ -1025,16 +1025,16 @@ function StaffReports() {
 										: 'N/A',
 									invoice.sellerdetails &&
 									invoice.sellerdetails.sellercompanyname
-										? invoice.sellerdetails.sellercompanyname
+										? invoice.sellerdetails.sellercompanyname.replace(/,/g, ' ')
 										: 'N/A',
 									invoice.buyerdetails && invoice.buyerdetails.buyercompanyname
-										? invoice.buyerdetails.buyercompanyname
+										? invoice.buyerdetails.buyercompanyname.replace(/,/g, ' ')
 										: 'N/A',
 									invoice.loadingdetails && invoice.loadingdetails.startpoint
-										? invoice.loadingdetails.startpoint
+										? invoice.loadingdetails.startpoint.replace(/,/g, ' ')
 										: 'N/A',
 									invoice.loadingdetails && invoice.loadingdetails.endpoint
-										? invoice.loadingdetails.endpoint
+										? invoice.loadingdetails.endpoint.replace(/,/g, ' ')
 										: 'N/A',
 									invoice.vehicledetails &&
 									invoice.vehicledetails.vechiclenumber
