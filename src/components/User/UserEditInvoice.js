@@ -168,16 +168,7 @@ const UserEditInvoice = () => {
           sellercompanystatename: selectedSeller?.sellercompanystatename || '',
           sellercompanyaddress: selectedSeller?.sellercompanyaddress || '',
           sellercompanystatecode: selectedSeller?.sellercompanystatecode || '',
-        },
-    buyerdetails: {  // Update buyer details with seller details
-      ...prevState.buyerdetails,
-      buyercompanyId: selectedSeller?.id || '',
-      buyercompanyname: selectedSeller?.sellercompanyname || '',
-      buyercompanygstno: selectedSeller?.sellercompanygstno || '',
-      buyercompanystatename: selectedSeller?.sellercompanystatename || '',
-      buyercompanyaddress: selectedSeller?.sellercompanyaddress || '',
-      buyercompanystatecode: selectedSeller?.sellercompanystatecode || '',
-    }
+        }
       }));
     } else if (name.startsWith("buyerdetails.")) {
       const selectedBuyer = buyers.find(buyer => buyer.buyercompanyname === value);
@@ -191,7 +182,16 @@ const UserEditInvoice = () => {
           buyercompanystatename: selectedBuyer?.buyercompanystatename || '',
           buyercompanyaddress: selectedBuyer?.buyercompanyaddress || '',
           buyercompanystatecode: selectedBuyer?.buyercompanystatecode || '',
-        }
+        },
+    sellerdetails: {  // Update seller details with buyer details
+      ...prevState.sellerdetails,
+      sellercompanyId: selectedBuyer?.id || '',
+      sellercompanyname: selectedBuyer?.buyercompanyname || '',
+      sellercompanygstno: selectedBuyer?.buyercompanygstno || '',
+      sellercompanystatename: selectedBuyer?.buyercompanystatename || '',
+      sellercompanyaddress: selectedBuyer?.buyercompanyaddress || '',
+      sellercompanystatecode: selectedBuyer?.buyercompanystatecode || '',
+    }
       }));
     } else if (name.startsWith("loadingdetails.")) {
       const selectedLoad = loads.find(load => load.startstate === value);
