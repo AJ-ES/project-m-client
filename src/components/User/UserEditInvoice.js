@@ -168,7 +168,16 @@ const UserEditInvoice = () => {
           sellercompanystatename: selectedSeller?.sellercompanystatename || '',
           sellercompanyaddress: selectedSeller?.sellercompanyaddress || '',
           sellercompanystatecode: selectedSeller?.sellercompanystatecode || '',
-        }
+        },
+    buyerdetails: {  // Update buyer details with seller details
+      ...prevState.buyerdetails,
+      buyercompanyId: selectedSeller?.id || '',
+      buyercompanyname: selectedSeller?.sellercompanyname || '',
+      buyercompanygstno: selectedSeller?.sellercompanygstno || '',
+      buyercompanystatename: selectedSeller?.sellercompanystatename || '',
+      buyercompanyaddress: selectedSeller?.sellercompanyaddress || '',
+      buyercompanystatecode: selectedSeller?.sellercompanystatecode || '',
+    }
       }));
     } else if (name.startsWith("buyerdetails.")) {
       const selectedBuyer = buyers.find(buyer => buyer.buyercompanyname === value);
