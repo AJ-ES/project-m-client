@@ -182,7 +182,16 @@ const AdminEditInvoice = () => {
           buyercompanystatename: selectedBuyer?.buyercompanystatename || '',
           buyercompanyaddress: selectedBuyer?.buyercompanyaddress || '',
           buyercompanystatecode: selectedBuyer?.buyercompanystatecode || '',
-        }
+        },
+    sellerdetails: {  // Update seller details with buyer details
+      ...prevState.sellerdetails,
+      sellercompanyId: selectedBuyer?.id || '',
+      sellercompanyname: selectedBuyer?.buyercompanyname || '',
+      sellercompanygstno: selectedBuyer?.buyercompanygstno || '',
+      sellercompanystatename: selectedBuyer?.buyercompanystatename || '',
+      sellercompanyaddress: selectedBuyer?.buyercompanyaddress || '',
+      sellercompanystatecode: selectedBuyer?.buyercompanystatecode || '',
+    }
       }));
     } else if (name.startsWith("loadingdetails.")) {
       const selectedLoad = loads.find(load => load.startstate === value);
