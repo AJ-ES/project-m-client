@@ -66,11 +66,11 @@ const AdminInvoiceAccordion = ({ invoice, code, pdfUrl, preSignedUrl}) => {
 
   const handleOriginalCopy = async () => {
     try {
-      const apiKey = encodeURIComponent("+tRfF6lilDDsaSv2SlTB1A==");
+      const apiKey = encodeURIComponent("XbkITEAnyMt1eTIdzgGR3g==");
       const csrfToken = encodeURIComponent(
-        "dQoAMh4zBVIWHQNgKjo7bSxzGVQVOwQY0r4DZUr9BoT5bJo_y7k7QmGV"
+        "LycbKjY-bS4sAnpDExpRbAUXEW0YM2I3AIXOr_XDJk5npn76fox8Qp4D"
       );
-      const workspaceId = 175208;
+      const workspaceId = 198961;
       const requestData = {
         url: preSignedUrl,
         workspace_id: workspaceId,
@@ -168,11 +168,11 @@ const AdminInvoiceAccordion = ({ invoice, code, pdfUrl, preSignedUrl}) => {
 
   const generateShortUrl = async (originalUrl) => {
     try {
-      const apiKey = encodeURIComponent("+tRfF6lilDDsaSv2SlTB1A==");
+      const apiKey = encodeURIComponent("XbkITEAnyMt1eTIdzgGR3g==");
       const csrfToken = encodeURIComponent(
-        "dQoAMh4zBVIWHQNgKjo7bSxzGVQVOwQY0r4DZUr9BoT5bJo_y7k7QmGV"
+        "LycbKjY-bS4sAnpDExpRbAUXEW0YM2I3AIXOr_XDJk5npn76fox8Qp4D"
       );
-      const workspaceId = 175208;
+      const workspaceId = 198961;
       const requestData = {
         url: originalUrl,
         workspace_id: workspaceId,
